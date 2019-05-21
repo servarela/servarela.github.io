@@ -45,6 +45,7 @@ a, a:hover {
     background: #ccc;
     border-radius: 50%;
     overflow: hidden;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
 }
 .profile-card__img img {
     max-width: 100%;
