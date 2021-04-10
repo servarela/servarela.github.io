@@ -23,8 +23,9 @@
         .pic {border-radius: 50%; vertical-align: middle; margin-bottom: 1em;}
         .title {font-size: 1.5em; font-weight: 600; margin: 0;}
         .links {list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1.5em;}
-        .btn {font-size: 1.25em; display: block; background-color: #000; color: #fff; text-decoration: none; margin-bottom: 1em; padding: .75em .75em .75em 1em; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center;}
-        .github:hover {background: #808080;}
+        .btn {font-size: 1.25em; display: block; background-color: #eee; color: #000; text-decoration: none; margin-bottom: 1em; padding: .75em .75em .75em 1em; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center;}
+        .btn:hover {color: #fff;}
+        .github:hover {background: #24292e;}
         .facebook:hover {background: #3b5998;}
         .instagram:hover {background: -o-linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);}
         .linkedin:hover {background: #0077b5;}
@@ -37,6 +38,11 @@
         .w-12 {width: .75em;}
         .w-14 {width: .875em;}
         .w-16 {width: 1em;}
+        @media (prefers-color-scheme: dark) {
+            body {background-color: #000;}
+            .title {color: #fff;}
+            .btn {background-color: #444; color: #fff;}
+        }
     </style>
 </head>
 <body>
