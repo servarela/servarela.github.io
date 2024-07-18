@@ -1,0 +1,60 @@
+---
+import '@fontsource-variable/roboto-mono'
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sergio Varela</title>
+  <meta property="og:locale" content="es_LA">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Sergio Varela">
+  <meta property="og:description" content="Frontend Developer">
+  <meta property="og:url" content="https://sergiovarela.com.ar">
+  <meta property="og:site_name" content="Sergio Varela">
+  <meta property="og:image" content="https://sergiovarela.com.ar/images/profile-image.jpg">
+</head>
+<body>
+  <div class="page">
+    <div class="container">
+      <slot/>
+    </div>
+  </div>
+</body>
+</html>
+
+<style is:global>
+  * {
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0; 
+    font-family: 'Roboto Mono Variable', sans-serif;
+  }
+
+  .page {
+    padding-top: 1.5rem; 
+    padding-bottom: 1.5rem;
+  }
+
+  .container {
+    max-width: 30rem; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding-left: 1rem; 
+    padding-right: 1rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+
+    body {
+      background-color: #222;
+    }
+    
+  }
+</style>

@@ -1,0 +1,91 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '@/layouts/Layout.astro'
+import SocialButton from '@/components/SocialButton.astro'
+import github from '@/assets/images/github.svg?raw'
+import x from '@/assets/images/x.svg?raw'
+import linkedin from '@/assets/images/linkedin.svg?raw'
+import facebook from '@/assets/images/facebook.svg?raw'
+import instagram from '@/assets/images/instagram.svg?raw'
+import profileImage from '../../public/images/profile-image.jpg'
+---
+
+<Layout>
+  <div class="profile">
+    <Image 
+      class="pic" 
+      src={profileImage} 
+      width="100" 
+      height="100" 
+      alt="Sergio Varela"
+    />
+    <h1 class="title">Sergio Varela</h1>
+    <h2 class="subtitle">Frontend Developer</h2>
+  </div>
+  <div class="links">
+    <SocialButton 
+      link="https://github.com/servarela/" 
+      color="#171515" 
+      icon={github}
+    >GitHub</SocialButton>
+    <SocialButton 
+      link="https://www.linkedin.com/in/varelasergio/" 
+      color="#0077b5" 
+      icon={linkedin}
+    >LinkedIn</SocialButton>
+    <SocialButton 
+      link="https://x.com/varelaser/" 
+      color="#000" 
+      icon={x}
+    >X</SocialButton>
+    <SocialButton 
+      link="https://www.facebook.com/varelasergio/" 
+      color="#0866ff" 
+      icon={facebook}
+    >Facebook</SocialButton>
+    <SocialButton 
+      link="https://www.instagram.com/varela_ser/" 
+      color="linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d)" 
+      icon={instagram}
+    >Instagram</SocialButton>
+  </div>
+</Layout>
+
+<style>
+  .profile {
+    text-align: center; 
+    margin-bottom: 1.5rem;
+  }
+
+  .pic {
+    border-radius: 50%; 
+    vertical-align: middle; 
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    font-size: 1.75rem; 
+    font-weight: 600; 
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .links {
+    margin-bottom: 1.5rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+
+    .title, .subtitle {
+      color: #fff;
+    }
+
+  }
+</style>

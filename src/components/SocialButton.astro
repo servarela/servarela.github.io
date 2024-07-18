@@ -1,0 +1,42 @@
+---
+const { link, color, icon } = Astro.props
+---
+
+<a href={link} target="_blank" class="btn">
+  <span><slot/></span>
+  <Fragment set:html={icon}/>
+</a>
+
+<style define:vars={{ color }}>
+  .btn {
+    font-size: 1.25rem; 
+    background-color: #eee; 
+    color: #000; 
+    text-decoration: none; 
+    margin-bottom: 1rem; 
+    padding: 0.875rem 0.875rem 1rem 1rem; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center;
+  }
+
+  .btn:hover {
+    color: #fff;
+    background: var(--color);
+  }
+
+  .btn :global(svg) {
+    width: 2rem; 
+    height: 2rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+
+    .btn {
+      background-color: #444; 
+      color: #fff;
+    }
+
+  }
+</style>
